@@ -1,0 +1,6 @@
+__pycache__/
+chroma_db/
+sample_transcripts/
+.env  # If you use a .env file for local environment variables
+*.pyc
+.DS_Store
