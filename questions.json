@@ -1,0 +1,37 @@
+[
+{
+    "id": "q1",
+    "text": "What is the primary purpose of the SUM function in Excel?",
+    "difficulty": "easy",
+    "topic": "Basic Formulas",
+    "ideal_answer": "The SUM function is used to add up all the numbers in a specified range of cells. For example, =SUM(A1:A10) would add all numbers from cell A1 to A10."
+  },
+  {
+    "id": "q2",
+    "text": "Explain how to use VLOOKUP. Provide an example syntax and describe each argument.",
+    "difficulty": "medium",
+    "topic": "Lookup Functions",
+    "ideal_answer": "VLOOKUP is an Excel function used to look up and retrieve data from a specific column in a table based on a lookup value. Its syntax is =VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup]).\n- `lookup_value`: The value you want to look for in the first column of the table.\n- `table_array`: The range of cells that contains the data (the table from which data will be retrieved).\n- `col_index_num`: The column number in the `table_array` from which to retrieve the matching value (the first column of the `table_array` is 1).\n- `[range_lookup]`: (Optional) A logical value specifying whether to search for an exact match (FALSE or 0) or an approximate match (TRUE or 1). For most real-world scenarios, FALSE (exact match) is preferred."
+  },
+  {
+    "id": "q3",
+    "text": "How would you use a PivotTable to analyze sales data that includes 'Region', 'Product', and 'Sales Amount'? Describe the steps.",
+    "difficulty": "medium",
+    "topic": "Data Analysis",
+    "ideal_answer": "To analyze sales data with a PivotTable:\n1. Select any cell within your data range.\n2. Go to 'Insert' tab on the Excel ribbon and click 'PivotTable'.\n3. In the 'Create PivotTable' dialog box, ensure your range is correct and choose where to place the PivotTable (e.g., 'New Worksheet'). Click 'OK'.\n4.  The PivotTable Fields pane will appear. Drag 'Region' to the 'Rows' area.\n5.  Drag 'Product' to the 'Columns' area.\n6.  Drag 'Sales Amount' to the 'Values' area. Excel will typically default to SUM, which is what we want for sales.\nThis will create a table summarizing sales amount by region and product, allowing you to easily see total sales for each combination."
+  },
+  {
+    "id": "q4",
+    "text": "You have a list of dates in column A. How would you conditional format cells in column A to highlight any date that is in the past week?",
+    "difficulty": "medium",
+    "topic": "Conditional Formatting",
+    "ideal_answer": "To conditionally format dates in the past week:\n1. Select the range of cells in column A that contains your dates (e.g., A2:A100).\n2. Go to 'Home' tab on the Excel ribbon, click 'Conditional Formatting', then 'New Rule...'.\n3. Choose 'Use a formula to determine which cells to format'.\n4. In the 'Format values where this formula is true:' field, enter a formula like: `=AND(A2>=TODAY()-7, A2<TODAY())` (assuming A2 is the first cell in your selection).\n5. Click 'Format...' to choose your desired fill color, font, or border.\n6. Click 'OK' twice to apply the rule."
+  },
+  {
+    "id": "q5",
+    "text": "Explain the difference between absolute, relative, and mixed cell references in Excel, providing an example for each.",
+    "difficulty": "hard",
+    "topic": "Formulas & References",
+    "ideal_answer": "Cell references determine how formulas behave when copied to other cells:\n- **Relative Reference (e.g., `A1`)**: This is the default. When a formula containing a relative reference is copied to another cell, the reference adjusts relative to the new position. If `=A1+B1` in C1 is copied to C2, it becomes `=A2+B2`.\n- **Absolute Reference (e.g., `$A$1`)**: When a formula containing an absolute reference is copied, the reference remains fixed. The dollar signs `$` lock the row and column. If `=$A$1+B1` in C1 is copied to C2, it becomes `=$A$1+B2`.\n- **Mixed Reference (e.g., `$A1` or `A$1`)**: Locks either the column or the row. `$A1` locks column A (row adjusts), so if copied from C1 to D2, it becomes `$A2`. `A$1` locks row 1 (column adjusts), so if copied from C1 to D2, it becomes `B$1`."
+  }
+]
